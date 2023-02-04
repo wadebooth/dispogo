@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "dispogo",
-    "slug": "dispogo",
+    "slug": "strainy",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,6 +28,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9a33e8ee-736f-40da-8292-8571f55a784b"
+      }
+    },
+    "owner": "wadebooth"
   }
 }
