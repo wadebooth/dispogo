@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { View, Text, FlatList, StyleSheet } from 'react-native'
 import useStrainData from '../hooks/useStrainData'
+import type { StrainData } from '../models/strains'
 
 const StrainList: React.FC = () => {
-  const strains = useStrainData()
+  const [strains, setStrains] = useState(useStrainData())
+
+  const addStrain = (strain: StrainData) => {
+    setStrains([...strains, strain])
+  }
+
+  const deleteStrain = (id: string) => {
+    setStrains(strains.filter((strain) => strain.id !== id))
+  }
 
   return (
     <FlatList

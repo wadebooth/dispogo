@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
 
-const fetchStrains = async () => {
+const fetchDescendingStrains = async () => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '5e1e3d821emsh79b658b8ac2ceedp10f146jsn7fcc942aa189',
-      'X-RapidAPI-Host': 'weed-strain1.p.rapidapi.com',
+      'X-RapidAPI-Key': 'process.env.STRAINS_API_KEY',
+      'X-RapidAPI-Host': 'process.env.X_RAPID_API_HOST',
     },
   }
 
@@ -21,4 +21,4 @@ const fetchStrains = async () => {
   }
 }
 
-export default fetchStrains
+export default fetchDescendingStrains
