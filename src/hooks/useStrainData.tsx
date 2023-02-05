@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
+import type { StrainData } from '../models/strains'
 
-const useStrainData = () => {
-  const [strains, setStrains] = useState<{ id: string; strain: string }[]>([])
+const useStrainData = (): StrainData[] => {
+  const [strains, setStrains] = useState<StrainData[]>([])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -13,22 +14,20 @@ const useStrainData = () => {
           'X-RapidAPI-Host': 'weed-strain1.p.rapidapi.com',
         },
       }
-
       try {
         const response = await fetch(
           'https://weed-strain1.p.rapidapi.com/?ordering=-strain',
           options
         )
         const responseJson = await response.json()
+
         setStrains(responseJson)
       } catch (error) {
         console.error(error)
       }
     }
-
     fetchData()
   }, [])
-
   return strains
 }
 
