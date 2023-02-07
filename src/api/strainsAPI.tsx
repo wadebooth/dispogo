@@ -4,8 +4,8 @@ const fetchDescendingStrains = async () => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': 'process.env.STRAINS_API_KEY',
-      'X-RapidAPI-Host': 'process.env.X_RAPID_API_HOST',
+      'X-RapidAPI-Key': 'STRAINS_API_KEY',
+      'X-RapidAPI-Host': 'X_RAPID_API_HOST',
     },
   }
 

@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
-import Home from '../screens/Home'
+import Home from '../screens/HomeTab'
 import StrainList from './Strainlist'
-import Profile from '../screens/Profile'
-import Settings from '../screens/Settings'
+import Profile from '../screens/ProfileTab'
+import Settings from '../screens/SettingsTab'
 
 const Tab = createMaterialBottomTabNavigator()
 
@@ -13,7 +13,7 @@ const BottomTabBar = () => {
     <Tab.Navigator
       initialRouteName='Home'
       activeColor='#e91e63'
-      style={{ backgroundColor: 'green' }}
+      style={{ backgroundColor: 'light-red' }}
     >
       <Tab.Screen
         name='Home'

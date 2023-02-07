@@ -1,5 +1,8 @@
+// Separating my hooks from my API
+
 import { useState, useEffect } from 'react'
 import type { StrainData } from '../models/strains'
+import fetchDescendingStrains from '../api/strainsAPI'
 
 const useStrainData = (): StrainData[] => {
   const [strains, setStrains] = useState<StrainData[]>([])
@@ -9,9 +12,8 @@ const useStrainData = (): StrainData[] => {
       const options = {
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key':
-            '5e1e3d821emsh79b658b8ac2ceedp10f146jsn7fcc942aa189',
-          'X-RapidAPI-Host': 'weed-strain1.p.rapidapi.com',
+          'X-RapidAPI-Key': 'STRAINS_API_KEY',
+          'X-RapidAPI-Host': 'X_RAPID_API_HOST',
         },
       }
       try {
