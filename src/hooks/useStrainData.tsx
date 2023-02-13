@@ -33,4 +33,4 @@ const useStrainData = (): StrainData[] => {
   return strains
 }
 
-export default useStrainData
+export default useStrainData;
